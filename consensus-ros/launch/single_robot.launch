@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	 <arg name="robot_name" default="robot_1"/>
+	 <arg name="neighbour_config" default="$(find consensus_ros)/config/neighbours.yaml" />
+
+     <group ns="$(arg robot_name)">
+     	<node name="consensus" pkg="consensus_ros" type="consensus_topic_single.py" output="screen">
+     		<param name="name" value="$(arg robot_name)"/>
+     		<param name="neighbours" value="$(arg neighbour_config)"/>
+     	</node>
+     </group>
+ </launch>

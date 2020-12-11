@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="comm_config" default="$(find consensus_ros)/config/neighbours.yaml" />
+  <arg name="use_consensus" default="true"/>
+
+  <group ns="UAV1">
+    <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
+      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent1_10r.pomdpx" />
+     	<arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent1_10r.policyx" />
+     	<arg name="consensus" value="$(arg use_consensus)" />
+    </include>
+    </group>
+  <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
+    <arg name="robot_name" value="UAV1" />
+    <arg name="neighbour_config" value="$(arg comm_config)" />
+  </include>
+	
+
+  <group ns="UAV2">
+    <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
+      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent3_10r.pomdpx" />
+     	<arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent3_10r.policyx" />
+     	<arg name="consensus" value="$(arg use_consensus)" />
+	  </include>
+  </group>
+  <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
+    <arg name="robot_name" value="UAV2" />
+    <arg name="neighbour_config" value="$(arg comm_config)" />
+  </include>
+	
+
+  <group ns="UAV3">
+    <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
+      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent4_10r.pomdpx" />
+      <arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent4_10r.policyx" />
+      <arg name="consensus" value="$(arg use_consensus)" />
+    </include>
+  </group>
+  <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
+    <arg name="robot_name" value="UAV3" />
+    <arg name="neighbour_config" value="$(arg comm_config)" />
+  </include>
+	
+</launch>
