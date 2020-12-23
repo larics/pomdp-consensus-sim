@@ -1,0 +1,104 @@
+UAV1:
+  type: scout
+  capabilities: fire_visual, fire_thermal, human_visual, human_audio
+  human_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  human_audio_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_thermal_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  failure_prob: 0.05
+
+UAV2:
+  type: firefighter
+  capabilities: fire_visual, fire_thermal
+  human_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  human_audio_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_thermal_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  failure_prob: 0.05
+
+UAV3:
+  type: scout
+  capabilities: fire_visual, human_visual, human_audio
+  human_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  human_audio_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_thermal_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  failure_prob: 0.05
+
+UGV1:
+  type: scout
+  capabilities: fire_visual, fire_thermal, human_visual, human_audio
+  human_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  human_audio_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_thermal_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  failure_prob: 0.05
+
+UGV2:
+  type: rescuer
+  capabilities: fire_visual, fire_thermal, human_visual, human_audio
+  human_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  human_audio_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_visual_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  fire_thermal_prob:
+    local: 0.8
+    neighbour: 0.0
+
+  failure_prob: 0.05
