@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <launch>
 
-     <arg name="pomdp_model" default="$(find pomdp_ros)/config/agent1_10r.pomdpx" />
-     <arg name="pomdp_policy" default="$(find pomdp_ros)/config/agent1_10r.policyx" />
-	 <arg name="consensus" default="false" />
-	 <arg name="action_config" default="$(find pomdp_ros)/config/action_time.yaml" />
+	<arg name="pomdp_model" default="$(find pomdp_ros)/config/agent1_10r.pomdpx" />
+	<arg name="pomdp_policy" default="$(find pomdp_ros)/config/agent1_10r.policyx" />
+	<arg name="consensus" default="false" />
+	<arg name="action_config" default="$(find pomdp_ros)/config/action_time.yaml" />
+	
 	<node name="planner" pkg="pomdp_ros" type="get_next_action.py" output="screen">
 		<param name="model" value="$(arg pomdp_model)"/>
 		<param name="policy" value="$(arg pomdp_policy)"/>
