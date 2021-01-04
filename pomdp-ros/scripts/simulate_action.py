@@ -29,6 +29,3 @@ if __name__ == "__main__":
     rospy.init_node('simulate_action_server')
     sim = Simulator()
     sim.service_server()
-
-        
-    
