@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 import yaml
-from consensus_ros.msg import BeliefStamped
+from pomdp_consensus_msgs.msg import BeliefStamped
 import message_filters
 from std_msgs.msg import Bool, Empty
 
@@ -76,12 +76,12 @@ class BeliefConsensus():
     def run(self):
         rate = rospy.Rate(50)
         while not rospy.is_shutdown():
-        	  to_publish = BeliefStamped()
-        	  to_publish.header.stamp = rospy.Time.now()
-        	  to_publish.belief.data = self.belief
-        	  self.pub_belief.publish(to_publish)
-        	  self.pub_consensus.publish(self.consensus_flag)
-		  rate.sleep()
+            to_publish = BeliefStamped()
+            to_publish.header.stamp = rospy.Time.now()
+            to_publish.belief.data = self.belief
+            self.pub_belief.publish(to_publish)
+            self.pub_consensus.publish(self.consensus_flag)
+            rate.sleep()
 
 if __name__ == '__main__':
     try:

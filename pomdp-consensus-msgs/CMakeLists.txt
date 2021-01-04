@@ -15,6 +15,7 @@ add_message_files(
 add_service_files(
   FILES
   GetNewAction.srv
+  SimulateAction.srv
 )
 
 generate_messages(
