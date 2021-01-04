@@ -6,8 +6,8 @@
 
   <group ns="UAV1">
     <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
-      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent1_10r.pomdpx" />
-     	<arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent1_10r.policyx" />
+      <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent1_10r.pomdpx" />
+     	<arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent1_10r.policyx" />
      	<arg name="consensus" value="$(arg use_consensus)" />
     </include>
     </group>
@@ -19,8 +19,8 @@
 
   <group ns="UAV2">
     <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
-      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent3_10r.pomdpx" />
-     	<arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent3_10r.policyx" />
+      <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent3_10r.pomdpx" />
+     	<arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent3_10r.policyx" />
      	<arg name="consensus" value="$(arg use_consensus)" />
 	  </include>
   </group>
@@ -32,8 +32,8 @@
 
   <group ns="UAV3">
     <include file="$(find pomdp_ros)/launch/single_pomdp.launch">
-      <arg name="pomdp_model" value="$(find pomdp_hrs_planner)/config/agent4_10r.pomdpx" />
-      <arg name="pomdp_policy" value="$(find pomdp_hrs_planner)/config/agent4_10r.policyx" />
+      <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent4_10r.pomdpx" />
+      <arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent4_10r.policyx" />
       <arg name="consensus" value="$(arg use_consensus)" />
     </include>
   </group>
