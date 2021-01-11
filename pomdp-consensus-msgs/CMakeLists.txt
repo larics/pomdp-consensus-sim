@@ -16,6 +16,7 @@ add_service_files(
   FILES
   GetNewAction.srv
   SimulateAction.srv
+  GenerateObservation.srv
 )
 
 generate_messages(

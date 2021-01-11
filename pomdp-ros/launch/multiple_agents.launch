@@ -9,6 +9,7 @@
       <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent1_10r.pomdpx" />
      	<arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent1_10r.policyx" />
      	<arg name="consensus" value="$(arg use_consensus)" />
+      <arg name="unit_name" value="UAV1" />
     </include>
     </group>
   <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
@@ -22,6 +23,7 @@
       <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent3_10r.pomdpx" />
      	<arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent3_10r.policyx" />
      	<arg name="consensus" value="$(arg use_consensus)" />
+      <arg name="unit_name" value="UAV2" />
 	  </include>
   </group>
   <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
@@ -35,6 +37,7 @@
       <arg name="pomdp_model" value="$(find pomdp_ros)/config/agent4_10r.pomdpx" />
       <arg name="pomdp_policy" value="$(find pomdp_ros)/config/agent4_10r.policyx" />
       <arg name="consensus" value="$(arg use_consensus)" />
+      <arg name="unit_name" value="UAV3" />
     </include>
   </group>
   <include file="$(find consensus_ros)/launch/single_robot.launch" if="$(arg use_consensus)">
