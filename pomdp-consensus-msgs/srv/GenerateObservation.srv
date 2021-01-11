@@ -1,0 +1,5 @@
+string obs_var
+string state
+string action
+---
+string observation
